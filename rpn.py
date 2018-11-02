@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import readline
+from colorama import Fore, Back, Style
 
 def calculate(arg):
     stack = []
@@ -13,6 +15,8 @@ def calculate(arg):
                 result = val1 + val2
             elif token == '-':
                 result = val1 - val2
+            elif token == '^':
+                result = val1 ** val2
 
             stack.append(result)
     if len(stack) > 1:
@@ -25,7 +29,10 @@ def main():
     while True:
         try:
             result = calculate(input("rpn clac> "))
-            print(result)
+            if (result > 0):
+                print(Fore.GREEN + str(result) + Style.RESET_ALL)
+            else:
+                print(Fore.RED + str(result) + Style.RESET_ALL)
         except ValueError:
             pass
 
