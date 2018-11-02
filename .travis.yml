@@ -3,4 +3,11 @@ sudo: enabled
 python:
   - 3.5
   - 3.6
-script: make test
+install:
+  - pip install python-coveralls
+script:
+  - make test
+  - coverage run test_rpn.py
+
+after_success:
+  - coveralls
