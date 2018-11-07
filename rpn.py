@@ -25,6 +25,20 @@ def calculate(arg):
 
     pass
 
+def fun():
+    print("fun")
+    print("fun")
+    print("fun")
+    print("fun")
+    print("fun")
+    print("fun")
+    print("fun")
+    print("fun")
+    print("fun")
+    print("fun")
+    print("fun")
+    print("fun")
+
 def main():
     while True:
         try:
